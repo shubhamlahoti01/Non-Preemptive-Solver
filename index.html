@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non-Preemptive Scheduling Algo Solver</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="input">
+        <div class="input-header">
+          <h2 class="top-heading top-heading-input">
+            Non-Preemptive Algo Solver
+          </h2>
+        </div>
+        <div class="input-section">
+          <div class="algodiv dd">
+            <label for="pagereplacementalgo" id="high"
+              >Non-Preemptive Algorithms:
+            </label>
+            <select name="nonpreemptivealgos" id="choosen">
+              <option value="fcfs" class="base">
+                FCFS(First Come First Serve)
+              </option>
+              <option value="sjf" class="base">
+                SJF(Shortest Job First-Non-Preemptive)
+              </option>
+              <option value="hrrn" class="base">
+                HRRN(Highest Response Ratio Next)
+              </option>
+              <option value="priority" class="base">
+                Priority(Non-Preemptive)
+              </option>
+            </select>
+          </div>
+          <div class="arrival-inputs dd">
+            <label>Arrival Times: </label>
+            <input type="text" value="1 3 5 7 8" id="avt" />
+          </div>
+          <div class="brust-inputs dd">
+            <label>Brust Times: </label>
+            <input type="text" value="3 6 8 4 5" id="bt" />
+          </div>
+          <button type="submit" class="btn" onclick="calculate()">
+            Submit
+          </button>
+        </div>
+      </div>
+      <div class="output">
+        <div class="output-header">
+          <h2 class="top-heading top-heading-output">Output</h2>
+        </div>
+        <div class="output-section">
+          <div class="table-div" id="table">
+            <h2>Generate your output here</h2>
+          </div>
+          <div class="summary-div"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="./fcfs.js"></script>
+    <script src="./sjf.js"></script>
+    <script src="./hrrn.js"></script>
+  </body>
+</html>
